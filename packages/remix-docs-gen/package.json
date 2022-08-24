@@ -1,0 +1,35 @@
+{
+  "name": "remix-docs-gen",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/sandulat/remix-docs-gen",
+    "directory": "packages/remix-docs-gen"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c --watch",
+    "test": "jest"
+  },
+  "files": [
+    "dist/**",
+    "package.json",
+    "README.md"
+  ],
+  "bin": {
+    "remix-docs-gen": "dist/cli.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "chokidar": "^3.5.3",
+    "fs-extra": "^10.0.0",
+    "meow": "^9.0.0",
+    "ts-morph": "^15.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "config": "*"
+  }
+}
