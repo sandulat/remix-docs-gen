@@ -1,5 +1,11 @@
 # remix-docs-gen
 
+## 0.1.2
+
+### Patch Changes
+
+- Fixed Readme typo.
+
 ## 0.1.1
 
 ### Patch Changes
