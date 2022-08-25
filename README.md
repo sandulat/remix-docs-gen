@@ -11,7 +11,7 @@
 
 ## About
 
-`remix-routes-gen` parses all of your `Remix` loaders and actions and _automatically_ documents all the typings per each route.
+`remix-docs-gen` parses all of your `Remix` loaders and actions and _automatically_ documents all the typings per each route.
 
 ## Installation
 
