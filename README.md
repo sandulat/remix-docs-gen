@@ -21,6 +21,8 @@ First, you have to install the package itself:
 yarn add -D remix-docs-gen
 ```
 
+> Note that you need @remix-run/server-runtime to be at least ^1.7.0.
+
 ## Usage Example
 
 You can simply run:

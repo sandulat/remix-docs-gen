@@ -1,5 +1,11 @@
 # remix-docs-gen
 
+## 0.1.3
+
+### Patch Changes
+
+- Replace UseDataFunctionReturn with SerializeFrom as per Remix 1.7.0.
+
 ## 0.1.2
 
 ### Patch Changes

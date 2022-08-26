@@ -84,14 +84,14 @@ const parseDataFunctionOutput = (
 
   const typeName = `__RESERVED_${dataFunctionName}_RETURN_TYPE_${timestamp}`;
 
-  const dataFunctionReturnTypeName = `__RESERVED_USE_DATA_FUNCTION_RETURN_${timestamp}`;
+  const serializeFromTypeName = `__RESERVED_SERIALIZE_FROM_${timestamp}`;
 
   sourceFile
     .replaceWithText(
-      `import { UseDataFunctionReturn as ${dataFunctionReturnTypeName} } from "@remix-run/react/dist/components";
+      `import type { SerializeFrom as ${serializeFromTypeName} } from "@remix-run/server-runtime";
 ${sourceFile.getFullText()}
 
-type ${typeName} = ${dataFunctionReturnTypeName}<typeof ${dataFunctionName}>;
+type ${typeName} = ${serializeFromTypeName}<typeof ${dataFunctionName}>;
 `
     )
     .getFullText();
