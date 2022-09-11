@@ -62,6 +62,10 @@ type ${typeName} = ${reservedExpandRecursivelyTypeName}<${sourceFile
       .replace(
         new RegExp(`}\`, "${reservedUnpackNumberEndTypeName}">`, "g"),
         ""
+      )
+      .replace(
+        new RegExp(`{ readonly \\\[Symbol\\\.toStringTag]: string; }`, "g"),
+        "never"
       );
   } catch {
     return null;

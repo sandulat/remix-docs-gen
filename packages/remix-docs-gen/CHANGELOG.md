@@ -1,5 +1,11 @@
 # remix-docs-gen
 
+## 0.1.4
+
+### Patch Changes
+
+- Transform promises to never.
+
 ## 0.1.3
 
 ### Patch Changes
