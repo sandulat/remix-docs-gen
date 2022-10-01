@@ -46,10 +46,6 @@ export const exportDocs = (routes: ComputedRoute[], outputPath: string) => {
   }
 `;
 
-  // export interface RemixDocs {
-  //     ${routeDocs}
-  // }
-
   fs.outputFileSync(path.resolve(process.cwd(), outputPath), output);
 
   logSuccess(
