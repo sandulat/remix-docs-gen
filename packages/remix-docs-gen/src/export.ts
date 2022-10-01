@@ -11,10 +11,8 @@ const generateDocsForRoutes = (routes: ComputedRoute[]) => {
 export const exportDocs = (routes: ComputedRoute[], outputPath: string) => {
   const routeDocsAggregate = routes.reduce<RouteDocsAggregate>(
     (acc, route) => {
-      const parsedDocs = JSON.parse(route.docs || "");
-
-      const doesLoaderExist = !!parsedDocs?.loader;
-      const doesActionExist = !!parsedDocs?.action;
+      const doesLoaderExist = route.docs?.includes("loader: "); // this would definitely need to be better validation
+      const doesActionExist = route.docs?.includes("action: ");
 
       if (doesLoaderExist) {
         acc.loaders.push(route);
