@@ -43,7 +43,24 @@ export const parseRoutes = (regexFilter?: string) =>
           )
           .filter((item) => Boolean(item.path) && !item.path.includes("/*"));
 
-      let routes = parseRoutes(JSON.parse(output));
+      let foundRoutes = parseRoutes(JSON.parse(output));
+      let homeRoute = foundRoutes.find((route) => route.path === "/");
+      if (!homeRoute) {
+        throw new Error("Home Route not found");
+      }
+      let rootRouteFile = (() => {
+        let filePathArray = homeRoute.file.split("/");
+        filePathArray.pop();
+        filePathArray.pop();
+        return filePathArray.join("/") + "/root.tsx";
+      })();
+
+      let rootRoute = {
+        path: "/root",
+        file: rootRouteFile,
+      };
+
+      let routes = [...foundRoutes, rootRoute];
 
       if (regexFilter) {
         routes = routes.filter((route) =>
