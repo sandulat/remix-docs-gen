@@ -13,3 +13,10 @@ export interface RemixRoute {
   index?: true;
   children?: RemixRoute[];
 }
+
+// Used for reduce in export
+export type RouteDocsAggregate = {
+  loaders: ComputedRoute[];
+  actions: ComputedRoute[];
+  all: ComputedRoute[];
+};
