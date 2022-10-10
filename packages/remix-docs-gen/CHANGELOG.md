@@ -1,5 +1,11 @@
 # remix-docs-gen
 
+## 0.1.5
+
+### Patch Changes
+
+- Replaced "exec" with programatic Remix CLI usage.
+
 ## 0.1.4
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "remix-docs-gen",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
+    "@remix-run/dev": "^1.0.3",
     "config": "*"
   },
   "peerDependencies": {

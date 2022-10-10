@@ -103,7 +103,7 @@ type ${typeName} = ${serializeFromTypeName}<typeof ${dataFunctionName}>;
   return parseType(sourceFile, typeName);
 };
 
-const processRouteDocs = (route: ComputedRoute, sourceFile?: SourceFile) => {
+const processRouteDocs = (sourceFile?: SourceFile) => {
   if (!sourceFile) {
     return null;
   }
@@ -151,7 +151,7 @@ export const generateDocs = (routes: Route[]): ComputedRoute[] => {
   return routes.reduce<ComputedRoute[]>((result, item) => {
     const sourceFile = project.getSourceFile(item.file);
 
-    const routeDocs = processRouteDocs(item, sourceFile);
+    const routeDocs = processRouteDocs(sourceFile);
 
     if (routeDocs) {
       result.push({
